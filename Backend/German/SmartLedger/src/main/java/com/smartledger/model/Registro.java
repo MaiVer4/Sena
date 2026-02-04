@@ -1,3 +1,4 @@
+package com.smartledger.model;
 public class Registro {
     protected String fecha;
     protected String descripcion;

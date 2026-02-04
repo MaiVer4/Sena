@@ -1,3 +1,4 @@
+package com.smartledger.model;
 public class Persona {
     protected String nombre;
 

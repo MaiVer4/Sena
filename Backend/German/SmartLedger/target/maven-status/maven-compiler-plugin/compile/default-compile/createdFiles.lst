@@ -1,0 +1,6 @@
+com/smartledger/SmartLedger.class
+com/smartledger/util/Env.class
+com/smartledger/model/Registro.class
+com/smartledger/model/Persona.class
+com/smartledger/model/Usuario.class
+com/smartledger/model/Transaccion.class
