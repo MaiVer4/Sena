@@ -1,0 +1,392 @@
+/* ==================================== */
+/* 1. RESET & VARIABLES                 */
+/* ==================================== */
+
+/* Reinicia márgenes, padding y activa box-sizing global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Variables CSS para mantener consistencia de colores */
+:root {
+    --color-oscuro-principal: #35424a;
+    --color-acento: #e8491d;
+    --color-texto: #333333;
+    --color-fondo: #f4f4f4;
+}
+
+/* Estilos base del body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--color-fondo);
+    color: var(--color-texto); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main empuja el footer hacia abajo */
+main {
+    flex: 1;
+    padding: 0 0 20px 0;
+}
+
+/* Contenedor adaptable para centrar contenido */
+.contenedor {
+    width: 90%; 
+    margin: auto; 
+    overflow: hidden; 
+    padding: 0 10px;
+}
+
+/* Estilos generales para enlaces */
+a {
+    color: var(--color-texto);
+    text-decoration: none; 
+}
+
+/* Botón principal reutilizable */
+.boton-principal {
+    height: 38px;
+    background: var(--color-acento);
+    border: 0;
+    padding: 0 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ------------------------------------
+   2. ESTILOS BASE (MÓVIL)
+   ------------------------------------ */
+
+/* HEADER: Estilos base para móviles */
+header {
+    background: var(--color-oscuro-principal); 
+    color: #ffffff; 
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: var(--color-acento) 3px solid; 
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Color resaltado dentro del título */
+header h1 .resaltado {
+    color: var(--color-acento);
+}
+
+/* Lista de navegación en columna para móvil */
+header nav ul {
+    list-style: none; 
+    padding: 0;
+    text-transform: uppercase;
+}
+
+/* Cada item ocupa toda la línea en móvil */
+header nav ul li {
+    display: block;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enlaces del header */
+header a {
+    color: #ffffff;
+}
+
+/* Hover y clase .actual */
+header nav a:hover,
+header nav li.actual a { 
+    color: var(--color-acento); 
+}
+
+/* BOLETÍN: Se apila en móvil */
+#boletin {
+    padding: 15px 0;
+    color: #ffffff;
+    background: var(--color-oscuro-principal); 
+    margin-top: 0;
+}
+
+#boletin .contenedor {
+    display: block;
+}
+
+/* Título del boletín centrado en móvil */
+#boletin h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* El formulario se apila verticalmente */
+#boletin form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input ocupa todo el ancho */
+#boletin input[type="email"] {
+    padding: 10px;
+    height: 38px;
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: var(--color-acento); 
+    text-align: center;
+}
+
+/* ------------------------------------
+   3. ESTILOS DE PÁGINAS (MÓVIL)
+   ------------------------------------ */
+
+/* HERO principal de la página de inicio */
+#cabecera-principal {
+    min-height: 300px;
+    background: url('../images/cabecera.jpg') no-repeat center center; 
+    background-size: cover; 
+    text-align: center;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 0;
+}
+
+/* Título del hero más pequeño en móvil */
+#cabecera-principal h2 {
+    margin-top: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#cabecera-principal p {
+    font-size: 16px;
+}
+
+/* Cajas del index apiladas */
+#columnas .contenedor {
+    display: block;
+    padding: 20px 10px;
+}
+
+.caja {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.caja img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+/* Layout con sidebar apilado */
+#main-column {
+    width: 100%;
+    padding: 0;
+}
+
+#sidebar {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Bloques oscuros */
+.fondo-oscuro {
+    background-color: var(--color-oscuro-principal);
+    color: #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Servicios */
+.lista-servicio {
+    padding: 15px;
+    border: #cccccc solid 1px;
+    margin-bottom: 15px;
+    background: #e6e6e6;
+}
+
+/* Inputs de formularios en páginas */
+#main-column input, 
+#main-column textarea,
+#sidebar .fondo-oscuro input,
+#sidebar .fondo-oscuro textarea {
+    width: 100%;
+    padding: 10px;
+    border: #cccccc solid 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ==================================== */
+/* 4. MEDIA QUERIES (ESCRITORIO)        */
+/* ==================================== */
+
+@media (min-width: 768px) {
+    
+    /* Contenedor con máximo ancho */
+    .contenedor {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    /* Header cambia a layout horizontal */
+    header {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    /* Logo + menú lado a lado */
+    header .contenedor {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 5px;
+    }
+
+    /* Menú en línea */
+    header nav ul li {
+        display: inline;
+        padding: 0 20px 0 20px;
+        border-top: none;
+    }
+
+    /* Boletín lado a lado en escritorio */
+    #boletin .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #boletin h2 {
+        margin-bottom: 0;
+        flex-grow: 1;
+        text-align: left;
+    }
+    
+    #boletin form {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    #boletin input[type="email"] {
+        width: 250px;
+    }
+
+    .boton-principal {
+        width: auto;
+        margin-top: 0;
+    }
+
+    /* Hero más grande en escritorio */
+    #cabecera-principal {
+        min-height: 450px;
+    }
+
+    #cabecera-principal h2 {
+        font-size: 55px;
+    }
+
+    /* Columnas lado a lado */
+    #columnas .contenedor {
+        display: flex;
+        gap: 30px; 
+    }
+
+    .caja {
+        flex-grow: 1; 
+        flex-basis: 0;
+        margin-bottom: 0;
+    }
+    
+    .caja img {
+        width: 90px;
+    }
+
+    /* Layout con sidebar flotante */
+    main .contenedor::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    #main-column {
+        float: left;
+        width: 65%;
+        padding: 0 10px 0 0;
+    }
+
+    #sidebar {
+        float: right;
+        width: 30%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* ================================================= */
+/* #cabecera-principal (Móvil y Escritorio)         */
+/* ================================================= */
+
+/* Hero con gradiente encima de la imagen */
+#cabecera-principal {
+    min-height: 350px;
+    padding: 40px 0;
+    text-align: center;
+    color: #ffffff;
+    
+    /* Gradiente + imagen */
+    background: 
+        linear-gradient(to right, rgba(53, 66, 74, 0.7), rgba(53, 66, 74, 0.7)), 
+        url('./images/891.jpg') no-repeat center center;
+    
+    background-size: cover; 
+}
+
+/* Centrado vertical del texto */
+#cabecera-principal .contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    min-height: 350px;
+}
+
+/* ================================================= */
+/* MEDIA QUERY (Escritorio: Mayor Altura)           */
+/* ================================================= */
+
+@media (min-width: 768px) {
+    
+    /* Hero más alto en escritorio */
+    #cabecera-principal {
+        min-height: 400px;
+    }
+    #cabecera-principal .contenedor {
+        min-height: 500px;
+    }
+    #cabecera-principal h2 {
+        font-size: 55px;
+    }
+
+}

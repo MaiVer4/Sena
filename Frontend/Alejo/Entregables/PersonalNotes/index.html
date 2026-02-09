@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>App de Notas</title>
+</head>
+<body>
+    <div class="notes-app">
+        <header class="app-header">
+      
+            <h1>Notas Personales</h1>
+        </header>
+        <form id="note-form" autocomplete="off">
+            <input type="text" id="note-title" placeholder="Título de la nota" maxlength="40" required>
+            <textarea id="note-content" placeholder="Escribe tu nota aquí..." maxlength="200" required></textarea>
+            <button type="submit"><span>➕</span> Agregar Nota</button>
+        </form>
+        <section class="notes-section">
+            <h2><span class="fav-star">★</span> Favoritas</h2>
+            <div id="favorite-notes" class="notes-list"></div>
+        </section>
+        <section class="notes-section">
+            <h2>Otras notas</h2>
+            <div id="notes-list" class="notes-list"></div>
+        </section>
+    </div>
+    
+    <script src="app.js"></script>
+   
+</body>
+</html>
