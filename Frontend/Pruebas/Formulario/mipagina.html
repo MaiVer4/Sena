@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML</title>
+</head>
+<body>
+    <img src="./html.webp" alt="">
+    <h1>¿Que es HTML?</h1>
+    <p><strong>Html</strong> (Hypertext Markup Lenguaje) es un lenguaje de marcado estandar para la creacion de paginas web.</p>
+    <br>
+    <h3>¿Que es un lenguaje de marcado estandar?</h3>
+    <p>Html no es un lenguaje de programacion sino un sistema de etiquetas que le dice al navegador como interpretar y estructurar el contenido.</p>
+<br>
+    <h3>¿Que puede hacer Html?</h3>
+    <ul>
+        <li>Organiza el contenido: títulos, párrafos, listas, imágenes, enlaces, formularios, etc.</li>
+        <li>Define la estructura: encabezados, secciones, pies de página, navegación, etc.</li>
+        <li>No controla los estilos (eso lo hace CSS.)</li>
+        <li>No tiene lógica ni comportamiento (eso lo hace JavaScript)</li>
+    </ul>
+    <br>
+    <h3>¿Cuales son las etiquetas mas usadas?</h3>
+        <h5><strong><strong>1. </strong>Estructura basica del documento</strong></h5>
+        <ul>
+            
+            <li><code> < html > </code>: Elemento raíz que contiene todo el contenido HTML de la página.</li>
+            <li><code>< head > </code>: Aquí van los elementos que no se muestran directamente en la página, como metadatos, definición de estilos, scripts, etc.</li>
+            <li><code>< body > </code>: Contiene el contenido visible de la página: texto, imágenes, enlaces, contenedores, etc.</li>
+        </ul>
+        <br>
+        <h5><strong>2. </strong>Metadatos etiquetas dentro de (< head >)</h5> 
+        <ul>
+           <li><code>< meta > </code>: Se usa para definir metadatos como tipo de caracteres, autor, descripción y configuración de viewport.</li> 
+           <li><code>< title > </code>: Define el título que aparece en la pestaña del navegador.</li>
+           <li><code>< base > </code>: Establece la URL base para enlaces relativos dentro del documento.</li>
+           <li><code>< link > </code>: Relaciona recursos externos, como hojas de estilo CSS o íconos.</li>
+           <li><code>< style > </code>: Permite insertar CSS directamente en el documento (dentro del < head >).</li>
+        </ul>   
+        <h5><strong>3. </strong>Elementos para estructurar contenido (seccionado)</h5>
+        <ul>
+            <li><code>< main > </code>: Contiene el contenido principal de la página. Solo debe haber uno por página.</li> 
+            <li><code>< header > </code>: Contiene contenido introductorio o enlaces de navegación. Puede ir al inicio del < body >, o dentro de secciones/artículos.</li> 
+            <li><code>< nav > </code>: Bloque de enlaces de navegación (menú principal, barra lateral, etc.).</li> 
+            <li><code>< section > </code>: Agrupa contenido relacionado temáticamente, normalmente empieza con un encabezado.</li> 
+            <li><code>< article > </code>: Contenido independiente, como publicaciones de blog, noticias o comentarios.</li> 
+            <li><code>< aside > </code>: Contenido relacionado de forma tangencial, como barras laterales, anuncios o enlaces complementarios.</li> 
+            <li><code>< footer > </code>: Pie de página de un documento o sección; puede contener autoría, derechos, enlaces relacionados, etc.</li> 
+        </ul>
+        <h5><strong>4. </strong>Encabezados (niveles de jerarquía)</h5>
+        <ul>
+            <li>><code>< h1 ></code> hasta <code>< h6 ></code>: Definen los títulos, desde el nivel más importante (< h1 >) hasta el menos (< h6 >), marcando la jerarquía del contenido.</li>
+        </ul>
+        <h5><strong>5.</strong>Agrupación de texto y contenido</h5>
+        <ul>
+            <li><code>< p ></code>Párrafo de texto.</li>
+            <li><code>< pre ></code>Texto preformateado, respetando espacios y saltos de línea.</li>
+            <li><code>< blockquote ></code>Cita en bloque (más extensa).</li>
+            <li><code>< hr ></code>Línea horizontal que separa contenido.</li>
+            <li><code>< figure ></code> Contenedor de contenido autocontenido como imágenes o diagramas.</li>
+            <li><code>< figcaption ></code>Título o pie descriptivo para <code>< figure ></code></li>
+            <li><code>< div ></code> Contenedor genérico sin significado semántico.</li>
+            <li><code>< address ></code>Información de contacto del autor o dueño del documento.</li>
+        </ul>
+        <h5><strong>6.</strong>Listas</h5>
+        <ul>
+            <li><code>< ol ></code>Lista ordenada (numerada).</li>
+            <li><code>< ul ></code>Lista desordenada (con viñetas).</li>
+            <li><code>< li ></code>Elemento de lista dentro de <code>< ol ></code> o <code>< ul ></code>.</li>
+            <li><code>< dl ></code>Lista de definición.</li>
+            <li><code>< dt ></code>Término en una lista de definición.</li>
+            <li><code>< dd ></code>Descripción del término <code>< dt ></code>.</li>
+        </ul>
+        <h5><strong>7.</strong>Texto en línea (inline) y semántica</h5>
+        <ul>
+            <li><code>< a ></code> Enlace (hipervínculo).</li>
+            <li><code>< em ></code> Énfasis (interpretable como entonación).</li>
+             <li><code>< strong ></code> Importancia fuerte (semántica, no solo estilo).</li>
+             <li><code>< small ></code> Texto de menor importancia (por ejemplo, nota al pie).</li>
+             <li><code>< s ></code> Texto tachado (obsoleto o incorrecto).</li>
+              <li><code>< cite ></code> Título de una obra creativa.</li>
+              <li><code>< q ></code> Cita corta en línea.</li>
+              <li><code>< dfn ></code> Definición de un término.</li>
+             <li><code>< abbr ></code> Abreviatura (con atributo <code>title</code> explicativo).</li>
+             <li><code>< data ></code> Asociación de texto con un valor semántico legible por máquina.</li>
+              <li><code>< time ></code> Fecha u hora, con formato legible por máquina (atributo <code>datetime</code>).</li>
+             <li><code>< code ></code> Texto con significado técnico (código).</li>
+             <li><code>< var ></code> Variable.</li>
+             <li><code>< sam p></code> Salida de programa.</li>
+             <li><code>< kbd ></code> Entrada de teclado.</li>
+             <li><code>< sub ></code> Subíndice.</li>
+             <li><code>< sup ></code> Superíndice.</li>
+             <li><code>< i ></code> Estilo en cursiva sin significado semántico.</li>
+              <li><code>< b ></code> Estilo en negrita sin significado semántico.</li>
+             <li><code>< u ></code> Subrayado, estilístico.</li>
+              <li><code>< mark ></code> Resaltar texto importante (marcado).</li>
+             <li><code>< bdi ></code> Control de dirección de texto (bidireccional).</li>
+              <li><code>< bdo ></code> Sobrescribir dirección de texto.</li>
+             <li><code>< span ></code> Contenedor inline genérico sin semántica.</li>
+             <li><code>< br ></code> Salto de línea.</li>
+             <li><code>< wbr ></code> Punto opcional de quiebre de línea.</li>
+        </ul>
+        <h5><strong>8.</strong>Tablas</h5>
+        <ul>
+            <li><code>< table ></code> Contenedor de una tabla.</li>
+             <li><code>< caption ></code> Título de la tabla.</li>
+            <li><code>< colgroup ></code>, <code>< col ></code> Agrupación de columnas para estilos o atributos compartidos.</li>
+            <li><code>< thead ></code>, <code>< tbody ></code>, <code>< tfoot ></code> Secciones de la tabla (cabecera, cuerpo y pie).</li>
+            <li><code>< tr ></code> Fila de la tabla.</li>
+            <li><code>< th ></code> Celda de cabecera.</li>
+            <li><code>< td ></code> Celda normal.</li>
+        </ul>
+        <h5><strong>9.</strong>Multimedia</h5>
+        <ul>
+             <li><code>< img ></code> Imagen con atributos necesarios como <code>src</code> y <code>alt</code>.</li>
+            <li><code>< picture ></code> Contenedor para seleccionar imágenes responsivas.</li>
+            <li><code>< source ></code> Fuente dentro de <code>< picture ></code> o <code>< video ></code>.</li>
+            <li><code>< video ></code>, <code>< audio ></code> Reproductores de contenido multimedia.</li>
+            <li><code>< track ></code> Pistas como subtítulos o descripciones dentro de <code>< video ></code> o <code>< audio ></code>.</li>
+            <li><code>< map ></code> Define un mapa de imagen para enlaces clicables.</li>
+            <li><code>< area ></code> Áreas dentro del mapa definido por <code>< map ></code>.</li>
+        </ul>
+        <h5><strong>10.</strong>Contenido embebido</h5>
+        <ul>
+            <li><code>< iframe ></code> Marco embebido de otro documento HTML.</li>
+            <li><code>< embed ></code> Incrustación de contenido externo (por ejemplo, PDFs, Flash).</li>
+            <li><code>< object ></code> Contenedor genérico para contenido externo.</li>
+            <li><code>< param ></code> Parámetros para contenido dentro de <code>< object ></code>.</li>
+        </ul>
+        <h5><strong>11.</strong>Gráficos y scripting</h5>
+        <ul>
+            <li><code>< canvas ></code> Lienzo para dibujo dinámico mediante JavaScript.</li>
+            <li><code>< script ></code> Código JavaScript insertado o referenciado.</li>
+            <li><code>< noscript ></code> Mensaje alternativo si JS está desactivado.</li>
+             <li><code>< template ></code> Contenido para clonarse dinámicamente con JavaScript.</li>
+            <li><code>< slot ></code> Lugar reservado en Web Components (plantillas personalizadas).</li>
+        </ul>
+
+</body>
+</html>
