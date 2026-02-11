@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario DANE</title>
+    <link rel="stylesheet" href="stylesf.css">
+</head>
+<body>
+    <form>
+        <h2>Información básica</h2>
+
+        <label>Nombre del operativo (ej. Censo / GEIH / ECV):</label>
+        <input type="text">
+
+        <label>Código / identificador de la entrevista (si aplica):</label>
+        <input type="number">
+
+        <label>Fecha de diligenciamiento:</label>
+        <input type="datetime-local">
+
+        <label>Nombre del encuestador / entrevistador:</label>
+        <input type="text">
+
+        <label>Departamento:</label>
+        <select id="departamento">
+            <option value="">Seleccione un departamento</option>
+        </select>
+
+        <label>Municipio:</label>
+        <select id="municipio">
+            <option value="">Seleccione un municipio</option>
+        </select>
+
+        <label>Dirección completa (barrio/vereda, calle, número):</label>
+        <input type="text">
+
+        <label><strong>Tipo de área:</strong></label>
+        <div class="radio-inline"><input type="radio" name="tipoArea" id="cabeceraMunicipal"><label for="cabeceraMunicipal">Cabecera municipal</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoArea" id="cabeceraMunicipalRural"><label for="cabeceraMunicipalRural">Cabecera municipal rural</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoArea" id="ruralDisperso"><label for="ruralDisperso">Rural disperso</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoArea" id="centroPoblado"><label for="centroPoblado">Centro poblado</label></div>
+
+        <h2>Identificación de la vivienda</h2>
+        <label><strong>Tipo de vivienda:</strong></label>
+        <div class="radio-inline"><input type="radio" name="tipoVivienda" id="casa"><label for="casa">Casa</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoVivienda" id="apartamento"><label for="apartamento">Apartamento</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoVivienda" id="viviendaColectiva"><label for="viviendaColectiva">Vivienda colectiva (cuarto, pensión)</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoVivienda" id="rancho"><label for="rancho">Rancho / choza</label></div>
+        <div class="radio-inline"><input type="radio" name="tipoVivienda" id="otroVivienda" class="other-radio" data-target="otroTextoVivienda"><label for="otroVivienda">Otro</label></div>
+        <input type="text" id="otroTextoVivienda" placeholder="Especifique..." disabled>
+
+        <label><strong>Material predominante de paredes:</strong></label>
+        <div class="radio-inline"><input type="radio" name="materialParedes" id="ladrillo"><label for="ladrillo">Ladrillo / Bloque</label></div>
+        <div class="radio-inline"><input type="radio" name="materialParedes" id="adobe"><label for="adobe">Adobe / Tapia</label></div>
+        <div class="radio-inline"><input type="radio" name="materialParedes" id="madera"><label for="madera">Madera</label></div>
+        <div class="radio-inline"><input type="radio" name="materialParedes" id="otroPared" class="other-radio" data-target="otroTextoPared"><label for="otroPared">Otro</label></div>
+        <input type="text" id="otroTextoPared" placeholder="Especifique..." disabled>
+
+        <label><strong>Material predominante del piso:</strong></label>
+        <div class="radio-inline"><input type="radio" name="materialPiso" id="tierra"><label for="tierra">Tierra</label></div>
+        <div class="radio-inline"><input type="radio" name="materialPiso" id="maderaPiso"><label for="maderaPiso">Madera</label></div>
+        <div class="radio-inline"><input type="radio" name="materialPiso" id="baldosa"><label for="baldosa">Baldosa</label></div>
+        <div class="radio-inline"><input type="radio" name="materialPiso" id="cemento"><label for="cemento">Cemento</label></div>
+        <div class="radio-inline"><input type="radio" name="materialPiso" id="otroPiso" class="other-radio" data-target="otroTextoPiso"><label for="otroPiso">Otro</label></div>
+        <input type="text" id="otroTextoPiso" placeholder="Especifique..." disabled>
+
+        <label>Número total de cuartos en la vivienda:</label>
+        <input type="number" class="small">
+
+        <label>Número de cuartos utilizados para dormir:</label>
+        <input type="number" class="small">
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
