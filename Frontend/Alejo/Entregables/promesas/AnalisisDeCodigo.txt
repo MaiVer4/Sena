@@ -1,0 +1,17 @@
+obtenerNumero()
+.then((num) => {
+multiplicarPorDos(num);
+})
+.then((resultado) => {
+console.log(resultado);
+});
+
+1. Este codigo imprime el resultado de la multiplicacion del numero que
+    revice por parametro(num);
+
+2. Porque es el resultado de la funcion multiplicarPorDos que nos retorno (num * 2)
+
+3. En el codigo falto retornar el resultado que nos da la funcion multiplicarPorDos por lo que
+    nos imprime un "undefined"
+
+4. el primer .then no retorna nada por falta de la palabra return por lo wue nos da un "undefined"
