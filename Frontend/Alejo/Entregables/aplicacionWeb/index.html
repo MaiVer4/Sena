@@ -2,17 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de usuarios</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Busqueda de usuarios</title>
 </head>
 <body>
-        <div id="principal">
-            <h1>Buscador de usuarios</h1>
-            <br>
-            <input type="text" placeholder="Ingrese el ID de usuario">
-          
-            <button>Buscar</button>
+
+    <div class="container">
+        <h1 class="titulo">Buscador de usuarios</h1>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="usuarioInput" 
+                class="input-search" 
+                placeholder="Ingrese el ID de usuario"
+            >
+            <button id="btnBuscar" class="btn-buscar">Buscar</button>
         </div>
+    
+        <div id="spinner" class="spinner">
+            <div class="spinner-border"></div>
+            <p>Cargando...</p>
+        </div>
+        <div id="resultado" class="resultado"></div>
+
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
