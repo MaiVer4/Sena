@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Los Simpsons API</title>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/The_Simpsons_yellow_logo.svg" alt="The Simpsons Logo" class="logo">
+            <h1>Directorio de Personajes</h1>
+        </header>
+
+        <div id="character-grid" class="grid"></div>
+
+        <div class="pagination">
+            <button id="prev-btn" onclick="changePage(-1)" disabled>Anterior</button>
+            <span id="page-info">Página 1</span>
+            <button id="next-btn" onclick="changePage(1)">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- Modal para detalles -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
