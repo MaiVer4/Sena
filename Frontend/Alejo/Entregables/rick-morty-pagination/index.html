@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rick and Morty</title>
+</head>
+
+<body>
+    <main>
+        <h1>Rick and Morty Characters</h1>
+
+        <!--Loanding-->
+        <div id="loanding" style="display: none;">
+            Cargando...
+        </div>
+
+        <!--Characters-->
+        <div id="characters"></div>
+
+        <!--Indicator-->
+        <div id="page-indicator"></div>
+
+        <!-- navegation -->
+        <div class="pagination">
+            <button id="first">Primera</button>
+            <button id="prev">Anterior</button>
+
+            <button id="prev5">-5</button>
+            <button id="next5">+5</button>
+
+            <button id="next">Siguiente</button>
+            <button id="last">Última</button>
+        </div>
+
+        <script type="module" src="scritps/app.js"></script>
+    </main>
+</body>
+
+</html>
