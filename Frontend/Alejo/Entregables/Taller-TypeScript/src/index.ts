@@ -1,0 +1,1 @@
+import "./ejercicios/ejercicio1";
