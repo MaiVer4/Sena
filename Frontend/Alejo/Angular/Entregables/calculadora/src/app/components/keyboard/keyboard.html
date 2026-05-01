@@ -1,8 +1,25 @@
-<!-- keyboard.html -->
 <div class="keyboard-grid">
+  <!-- Fila 1 -->
   <button (click)="clickEnTecla('7')">7</button>
   <button (click)="clickEnTecla('8')">8</button>
   <button (click)="clickEnTecla('9')">9</button>
+  <button (click)="clickEnTecla('/')" class="operator">/</button>
+
+  <!-- Fila 2 -->
+  <button (click)="clickEnTecla('4')">4</button>
+  <button (click)="clickEnTecla('5')">5</button>
+  <button (click)="clickEnTecla('6')">6</button>
+  <button (click)="clickEnTecla('*')" class="operator">*</button>
+
+  <!-- Fila 3 -->
+  <button (click)="clickEnTecla('1')">1</button>
+  <button (click)="clickEnTecla('2')">2</button>
+  <button (click)="clickEnTecla('3')">3</button>
+  <button (click)="clickEnTecla('-')" class="operator">-</button>
+
+  <!-- Fila 4 -->
+  <button (click)="clickEnTecla('0')">0</button>
+  <button (click)="clickEnTecla('C')" class="clear">C</button>
+  <button (click)="clickEnTecla('=')" class="equal">=</button>
   <button (click)="clickEnTecla('+')" class="operator">+</button>
-  <!-- Agregaremos más luego, primero probemos que esto "suene" -->
 </div>

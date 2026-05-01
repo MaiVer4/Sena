@@ -1,3 +1,11 @@
+import { Component } from "@angular/core";
+
+@Component({
+  selector: 'app-root',
+  standalone: false,
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss']
+})
 export class AppComponent {
   numeroEnPantalla: string = '0';
   primerValor: number | null = null;
@@ -5,7 +13,9 @@ export class AppComponent {
   esperandoSegundoNumero: boolean = false;
 
   alPresionarTecla(tecla: string) {
-    if (this.esNumero(tecla)) {
+    if (tecla === 'C') {
+      this.limpiarCalculadora();
+    } else if (this.esNumero(tecla)) {
       this.manejarNumero(tecla);
     } else if (this.esOperador(tecla)) {
       this.manejarOperador(tecla);
@@ -14,6 +24,12 @@ export class AppComponent {
     }
   }
 
+  private limpiarCalculadora() {
+    this.numeroEnPantalla = '0';
+    this.primerValor = null;
+    this.operacion = null;
+    this.esperandoSegundoNumero = false;
+  }
   private esNumero(valor: string): boolean {
     return !isNaN(Number(valor));
   }
