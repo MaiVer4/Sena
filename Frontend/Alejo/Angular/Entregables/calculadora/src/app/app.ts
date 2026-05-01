@@ -36,4 +36,31 @@ export class AppComponent {
     this.operacion = op;
     this.esperandoSegundoNumero = true;
   }
+
+  private realizarCalculo() {
+    if (this.primerValor === null || this.operacion === null) return;
+
+    const segundoValor = Number(this.numeroEnPantalla);
+    let resultado: number = 0;
+
+    switch (this.operacion) {
+      case '+':
+        resultado = this.primerValor + segundoValor;
+        break;
+      case '-':
+        resultado = this.primerValor - segundoValor;
+        break;
+      case '*':
+        resultado = this.primerValor * segundoValor;
+        break;
+      case '/':
+        resultado = segundoValor !== 0 ? this.primerValor / segundoValor : 0; // Evitamos dividir por cero
+        break;
+    }
+
+    this.numeroEnPantalla = resultado.toString();
+    this.primerValor = null;
+    this.operacion = null;
+  }
+
 }
