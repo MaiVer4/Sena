@@ -39,11 +39,12 @@ export class AppComponent {
   }
 
   private manejarNumero(num: string) {
-    if (this.esperandoSegundoNumero) {
+    if (this.numeroEnPantalla.length >= 15) return;
+
+    if (this.numeroEnPantalla === '0') {
       this.numeroEnPantalla = num;
-      this.esperandoSegundoNumero = false;
     } else {
-      this.numeroEnPantalla = this.numeroEnPantalla === '0' ? num : this.numeroEnPantalla + num;
+      this.numeroEnPantalla += num;
     }
   }
 
@@ -51,12 +52,18 @@ export class AppComponent {
     this.primerValor = Number(this.numeroEnPantalla);
     this.operacion = op;
     this.esperandoSegundoNumero = true;
+
+    this.numeroEnPantalla = `${this.primerValor} ${op}`;
   }
 
   private realizarCalculo() {
     if (this.primerValor === null || this.operacion === null) return;
 
+    const partes = this.numeroEnPantalla.split(` ${this.operacion}`)
     const segundoValor = Number(this.numeroEnPantalla);
+
+    if (isNaN(segundoValor)) return;
+      
     let resultado: number = 0;
 
     switch (this.operacion) {
