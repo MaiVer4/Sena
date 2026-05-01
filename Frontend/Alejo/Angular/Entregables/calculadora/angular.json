@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "calculadora": {
+    "caculadora": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -68,10 +68,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "calculadora:build:production"
+              "buildTarget": "caculadora:build:production"
             },
             "development": {
-              "buildTarget": "calculadora:build:development"
+              "buildTarget": "caculadora:build:development"
             }
           },
           "defaultConfiguration": "development"

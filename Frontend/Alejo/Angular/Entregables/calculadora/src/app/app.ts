@@ -7,5 +7,14 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('calculadora');
+  numeroEnPantalla: string = '0';
+
+  alPresionarTecla(tecla: string) {
+    if (this.numeroEnPantalla === '0') {
+      this.numeroEnPantalla = tecla;
+    } else {
+      this.numeroEnPantalla += tecla;
+    }
+  }
+
 }
