@@ -1,4 +1,7 @@
 <div class="calculator-wrapper">
-  <app-display [valor]="numeroEnPantalla"></app-display>
+  <app-display 
+    [valor]="numeroEnPantalla" 
+    [operacionVisual]="operacion || ''">
+  </app-display>
   <app-keyboard (pulsarBoton)="alPresionarTecla($event)"></app-keyboard>
 </div>

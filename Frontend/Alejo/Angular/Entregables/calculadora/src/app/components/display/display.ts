@@ -11,4 +11,5 @@ import { Component, Input } from '@angular/core';
 
 export class Display {
   @Input() valor: string = '0';
+  @Input() operacionVisual: string = '';
 }

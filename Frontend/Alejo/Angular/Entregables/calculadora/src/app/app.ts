@@ -39,14 +39,13 @@ export class AppComponent {
   }
 
   private manejarNumero(num: string) {
-    if (this.numeroEnPantalla.length >= 15) return;
-
-    if (this.numeroEnPantalla === '0') {
-      this.numeroEnPantalla = num;
-    } else {
-      this.numeroEnPantalla += num;
-    }
+  if (this.esperandoSegundoNumero) {
+    this.numeroEnPantalla = num;
+    this.esperandoSegundoNumero = false;
+  } else {
+    this.numeroEnPantalla = this.numeroEnPantalla === '0' ? num : this.numeroEnPantalla + num;
   }
+}
 
   private manejarOperador(op: string) {
     this.primerValor = Number(this.numeroEnPantalla);

@@ -1,12 +1,21 @@
 .display-container {
-  background-color: #1e1e1e; // Un gris muy oscuro
-  color: #00ff00;            // Verde tipo terminal (o blanco si prefieres)
+  display: flex;
+  justify-content:空间-between; // Alinea operador a la izquierda y número a la derecha
+  align-items: center;
+  background-color: #1e1e1e;
+  color: #00ff00;
   padding: 20px;
-  border-radius: 8px;
+  min-height: 60px;
+  font-family: 'Courier New', monospace;
+}
+
+.operator-hint {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.main-number {
+  font-size: 2.5rem;
+  flex-grow: 1;
   text-align: right;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2rem;
-  box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
-  margin-bottom: 10px;
-  min-height: 50px;
 }
