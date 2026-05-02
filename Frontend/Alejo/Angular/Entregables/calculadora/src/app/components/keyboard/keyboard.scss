@@ -1,43 +1,83 @@
 .keyboard-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // 4 columnas iguales
-  gap: 10px;
-  padding: 10px;
-  background-color: #333;
-  border-radius: 0 0 8px 8px;
-}
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 18px;
+  background: linear-gradient(145deg, #1c1c1e, #2c2c2e);
+  border-radius: 0 0 20px 20px;
 
-button {
-  padding: 20px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #444;
-  color: white;
-  transition: background-color 0.2s, transform 0.1s;
+  button {
+    padding: 22px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 14px;
 
-  &:hover {
-    background-color: #555;
+    background: #f2f2f2;
+    color: #1c1c1e;
+
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.25),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+
+    transition: all 0.15s ease;
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+
+    &:active {
+      transform: scale(0.92);
+      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+    }
   }
 
-  &:active {
-    transform: scale(0.95);
+  // Botón 0 (más natural tipo iPhone)
+  .zero {
+    grid-column: span 2;
+    text-align: center;
+    padding-left: 0;
   }
 
-  &.operator {
-    background-color: #f39c12; // Naranja para operaciones
-    &:hover { background-color: #e67e22; }
+  // Operadores (naranja más elegante)
+  .operator {
+    background: linear-gradient(145deg, #ff9f0a, #ff7b00);
+    color: white;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 
-  &.equal {
-    background-color: #27ae60; // Verde para el resultado
-    grid-column: span 1; 
-    &:hover { background-color: #2ecc71; }
+  // Igual (acción principal)
+  .equal {
+    background: linear-gradient(145deg, #34c759, #28a745);
+    color: white;
+    font-size: 1.8rem;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 
-  &.clear {
-    background-color: #c0392b; // Rojo para limpiar
-    &:hover { background-color: #e74c3c; }
+  // Limpiar
+  .clear {
+    background: linear-gradient(145deg, #ff5e57, #d63031);
+    color: white;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  // Funciones (+/- %)
+  .function {
+    background: #d1d1d6;
+    color: #1c1c1e;
+
+    &:hover {
+      background: #bdbdc2;
+    }
   }
 }
