@@ -1,8 +1,24 @@
 .calculator-wrapper {
-  max-width: 350px;
-  margin: 50px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  background-color: #222;
+  width: 90%;            // Usa el 90% del ancho disponible en pantallas pequeñas
+  max-width: 400px;      // Pero nunca supera los 400px en monitores grandes
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+// Media query para móviles
+@media (max-width: 480px) {
+  .calculator-wrapper {
+    width: 100%;
+    margin: 0;
+    height: 100vh;       // Ocupa todo el alto de la pantalla del móvil
+    border-radius: 0;
+  }
+  
+  // Ajustamos el tamaño de los botones para que sean fáciles de tocar
+  button {
+    padding: 25px 0;
+    font-size: 1.5rem;
+  }
 }
