@@ -1,0 +1,19 @@
+.recuadro-central {
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 20px auto;
+  background-color: white; 
+
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+
+    transition: all 0.3 ease;
+}
+
+.recuadro-central[style*="background-color"] {
+  box-shadow: 
+    inset 9px 9px 16px rgba(163, 177, 198, 0.6),
+    inset -9px -9px 16px rgba(255, 255, 255, 0.5);
+}

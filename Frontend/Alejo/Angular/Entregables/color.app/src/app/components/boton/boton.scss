@@ -1,0 +1,39 @@
+/* src/app/components/botonera/botonera.component.css */
+.panel-botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none; /* Quitamos el borde negro */
+  border-radius: 12px;
+  background-color: #e0e5ec; /* Mismo color de fondo */
+  font-weight: bold;
+  color: #333;
+  
+  /* Sombra exterior para el botón elevado */
+  box-shadow: 
+    6px 6px 10px rgba(163, 177, 198, 0.6),
+    -6px -6px 10px rgba(255, 255, 255, 0.5);
+    
+  transition: all 0.2s ease; /* Transición rápida para el clic */
+}
+
+/* El efecto al pasar el ratón: un poco más elevado */
+button:hover {
+  box-shadow: 
+    8px 8px 12px rgba(163, 177, 198, 0.7),
+    -8px -8px 12px rgba(255, 255, 255, 0.6);
+}
+
+/* EL EFECTO MÁGICO: Al hacer clic (active), cambiamos a sombras interiores */
+button:active {
+  box-shadow: 
+    inset 6px 6px 10px rgba(163, 177, 198, 0.6),
+    inset -6px -6px 10px rgba(255, 255, 255, 0.5);
+  transform: translateY(2px); /* Un pequeño movimiento hacia abajo */
+}

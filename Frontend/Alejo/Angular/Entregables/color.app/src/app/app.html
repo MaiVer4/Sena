@@ -1,0 +1,11 @@
+<div class="contenedor-principal">
+  <h1>Cambiador de Colores</h1>
+
+  <app-pantalla [colorFondo]="colorActual"></app-pantalla>
+
+  <p class="nombre-color" *ngIf="colorActual !== 'white'">
+    {{ colorActual ? colorActual : 'Selecciona un color' }}
+  </p>
+  <app-boton (colorSeleccionado)="actualizarColor($event)"></app-boton>
+
+</div>

@@ -1,0 +1,29 @@
+.contenedor-principal {
+  display: grid;
+  place-items: center; 
+  gap: 20px;         
+  padding: 50px;
+  border-radius: 50px;
+  background-color: #e0e5ec; 
+
+  box-shadow: 20px 20px 60px #bec3c9,  
+             -20px -20px 60px #ffffff; 
+}
+
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 0px #ffffff; 
+    font-weight: 600;
+}
+
+.nombre-color {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase; 
+  margin: 10px 0;
+  text-shadow: 1px 1px 0px #ffffff; 
+}
