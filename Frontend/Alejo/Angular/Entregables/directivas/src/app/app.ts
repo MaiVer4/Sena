@@ -6,6 +6,13 @@ import { Component, signal } from '@angular/core';
   standalone: false,
   styleUrl: './app.scss'
 })
+
+type EstadoCarga = 'PENDIENTE' | 'CARGANDO' | 'EXITO';
+
+
 export class App {
-  protected readonly title = signal('directivas');
+  estadoActual: EstadoCarga = 'PENDIENTE';
+  items: string[] = [];
 }
+
+
