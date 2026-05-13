@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.3s;
+  
+  &.cargar { background-color: #28a745; color: white; }
+  &.borrar { background-color: #dc3545; color: white; }
+  &:hover { opacity: 0.8; }
+}
+
+.estado-msg {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  &.pendiente { background-color: #f8f9fa; border: 1px solid #dee2e6; }
+  &.cargando { color: #0056b3; font-weight: bold; }
+  &.exito { color: #155724; background-color: #d4edda; }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+}

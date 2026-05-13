@@ -1,20 +1,28 @@
-<button (click)="manejarClick()">
+<div class="container">
+  <button (click)="manejarClick()" class="items.length > 0 ? 'borrar' : 'cargar'">
   {{items.length > 0 ? 'Borrar' : 'Cargar' }}
 </button>
 
 @if (estadoActual === 'CARGANDO') {
-  <p>⏳ Cargando elementos...</p>
+  <div class="estado-msg cargando">
+    <p>Cargando elementos...</p>
+  </div>
 }
 
 @if (estadoActual === 'PENDIENTE') {
-  <p>Elementos Pendientes</p>
+  <div class="estado-msg pendiente">
+    <p>Aun no se han cargado datos.</p>
+  </div>
 }
 
 @if (estadoActual === 'EXITO') {
-  <p>Elementos Cargados Con Exito!</p>
+  <div class="estado-msg exito">
+    <p>¡Datos cargados correctamente!</p>
   <ul>
     @for (item of items; track item) {
       <li>{{ item }}</li>
     }
   </ul>
+  </div>
 }
+</div>
