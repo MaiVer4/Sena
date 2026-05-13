@@ -1,28 +1,54 @@
 <div class="container">
-  <button (click)="manejarClick()" class="items.length > 0 ? 'borrar' : 'cargar'">
-  {{items.length > 0 ? 'Borrar' : 'Cargar' }}
-</button>
 
-@if (estadoActual === 'CARGANDO') {
+  <div class="page-header">
+    <h1>Data <span>Loader</span></h1>
+    <p>Sistema de carga de datos</p>
+  </div>
+
+  <div class="action-bar">
+    <button (click)="manejarClick()" [class.cargar]="items.length === 0" [class.borrar]="items.length > 0">
+      {{ items.length > 0 ? 'Borrar datos' : 'Cargar datos' }}
+    </button>
+  </div>
+
+  @if (estadoActual === 'CARGANDO') {
   <div class="estado-msg cargando">
-    <p>Cargando elementos...</p>
+    Cargando elementos...
   </div>
-}
+  }
 
-@if (estadoActual === 'PENDIENTE') {
+  @if (estadoActual === 'PENDIENTE') {
   <div class="estado-msg pendiente">
-    <p>Aun no se han cargado datos.</p>
+    Sin datos cargados
   </div>
-}
+  }
 
-@if (estadoActual === 'EXITO') {
+  @if (estadoActual === 'EXITO') {
   <div class="estado-msg exito">
-    <p>¡Datos cargados correctamente!</p>
-  <ul>
-    @for (item of items; track item) {
-      <li>{{ item }}</li>
-    }
-  </ul>
+    Datos cargados correctamente
   </div>
-}
+  }
+
+  @if (estadoActual === 'EXITO' && items.length > 0) {
+  <div class="data-panel">
+    <div class="panel-header">
+      <span>Resultados</span>
+      <span class="count-badge">{{ items.length }} items</span>
+    </div>
+    <ul>
+      @for (item of items; track item) {
+      <li>{{ item }}</li>
+      }
+    </ul>
+  </div>
+  }
+
+  @if (estadoActual === 'PENDIENTE') {
+  <div class="data-panel">
+    <div class="empty-state">
+      Sin registros para mostrar
+    </div>
+  </div>
+  }
+
 </div>
